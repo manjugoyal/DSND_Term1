@@ -127,7 +127,7 @@ def feature_plot(importances, X_train, y_train):
     values = importances[indices][:5]
 
     # Creat the plot
-    fig = pl.figure(figsize = (9,5))
+    fig = pl.figure(figsize = (15,5))
     pl.title("Normalized Weights for First Five Most Predictive Features", fontsize = 16)
     pl.bar(np.arange(5), values, width = 0.6, align="center", color = '#00A000', \
           label = "Feature Weight")
@@ -137,7 +137,6 @@ def feature_plot(importances, X_train, y_train):
     pl.xlim((-0.5, 4.5))
     pl.ylabel("Weight", fontsize = 12)
     pl.xlabel("Feature", fontsize = 12)
-    
     pl.legend(loc = 'upper center')
     pl.tight_layout()
     pl.show()  
